@@ -1,0 +1,849 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CliniquePlus EMR | List Equipments</title>
+	<link href="https://cliniqueplushealthcare.com.ng/public/css/singles.css" rel="stylesheet" />
+	<link href="https://cliniqueplushealthcare.com.ng/public/css/style.css" rel="stylesheet" />
+	<link href="https://cliniqueplushealthcare.com.ng/public/css/sub_style.css" rel="stylesheet" />
+	<link href="https://cliniqueplushealthcare.com.ng/public/css/all.css" rel="stylesheet" />
+	<link href="https://cliniqueplushealthcare.com.ng/public/css/custom_icons.css" rel="stylesheet" />
+	<link href="https://cliniqueplushealthcare.com.ng/public/css/main.css" rel="stylesheet" />
+	<link href="https://cliniqueplushealthcare.com.ng/public/css/list_equipments.css" rel="stylesheet" />
+	<link href="demmo.css" rel="stylesheet" />
+	<script>
+		window.base_url = "http://cliniqueplushealthcare.com.ng/";
+	</script>
+	<script src="https://cliniqueplushealthcare.com.ng/public/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+	<script>
+		tinymce.init({
+			selector: "#mytextarea",
+		});
+	</script>
+	<style>
+		/* CSS for the loading animation */
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.loading {
+			width: 25px;
+			height: 25px;
+			border: 5px solid #f3f3f3;
+			border-top: 5px solid #3498db;
+			border-radius: 50%;
+			animation: spin 2s linear infinite;
+		}
+	</style>
+</head>
+<!--body of webpage with a js function on window screen change-->
+
+<body onresize="" class="opd_visit_details">
+	<!--topnav begins-->
+	<div id="headDiv" class="topnav">
+		<!--topnav for web-->
+		<span class="web_nav">
+			<div class="sub-side-bar">
+				<img class="logo" src="uploads/facility_logo/nubi_small_(1).png" alt="logo" />
+				<a class="web_btn" href="javascript:void(0);" style="cursor: pointer" onclick="toggleNav()">
+					<i class="fa fa-fw fa-bars nav-icon"></i>
+					<b class="lab-name">Your Clinic Name Here</b>
+				</a>
+			</div>
+		</span>
+		<!--topnav for mobile-->
+		<span class="sub-side-bar mobile_nav">
+			<img class="logo" src="https://cliniqueplushealthcare.com.ng/public/img/logo.png" alt="logo" />
+			<b class="lab-name">Your Laboratory Name</b>
+		</span>
+		<div class="sub-top-nav">
+			<a onclick="dropDown('#noticeMenu')" href="javascript:void(0);" style="margin-right: 7px">
+				<i class="fa fa-fw fa-bell nav-icon"></i><sup class="notify" id="notify" style="display: none">0</sup>
+			</a>
+			<a onclick="dropDown('#msgMenu')" href="javascript:void(0);" style="margin-right: 7px">
+				<i class="fa fa-fw fa-envelope nav-icon"></i><sup class="notify">1</sup>
+			</a>
+			<!--notification dropdown-->
+			<div id="noticeMenu" onclick="stopProp()" style="
+            visibility: hidden;
+            max-height: 60vh;
+            width: 300px;
+            overflow: auto;
+          " class="noticeMenu">
+				<div class="noticeMenuitem">
+					<span id="75" class="drop-icon"><i class="fa fa-fw fa-user"></i></span>
+					<span onclick="mark_notification_read(75)">Ban A Patient</span><br />
+					<span class="info" style="font-weight: 600">odinaka lala banned by System at 2023-09-21 | 10:28
+						PM</span>
+				</div>
+				<div class="noticeMenuitem">
+					<span id="74" class="drop-icon"><i class="fa fa-fw fa-user"></i></span>
+					<span onclick="mark_notification_read(74)">Ban A Patient</span><br />
+					<span class="info" style="font-weight: 600">odinaka lala banned by System at 2023-09-21 | 10:27
+						PM</span>
+				</div>
+			</div>
+			<div id="msgMenu" onclick="stopProp()" style="visibility: hidden; width: 350px; line-height: 1.25"
+				class="noticeMenu">
+				<div class="noticeMenuitem" style="
+              padding: 0px 5px;
+              display: flex;
+              line-height: 1.25;
+              border-bottom: 1px solid #ccc;
+            ">
+					<div style="display: inline-block; width: 5%; padding: 2px">
+						<b>1.</b>
+					</div>
+					<br />
+					<div style="display: inline-block; width: 90%; padding: 2px">
+						<div><b>Scheduled Appointment For Evelyn Sane (07013177)</b></div>
+						<div>
+							Follow up after Doctors consultation with Dr. Ogheneare (122445)
+						</div>
+						<div>
+							<small>Apointment Date &amp; Time: 2023-01-01 9:56AM</small>
+						</div>
+						<div>
+							<button class="btns" style="
+                    background: #91b48c;
+                    padding: 3px 6px;
+                    font-weight: 400;
+                    width: 100px;
+                  ">
+								comfirmed
+							</button>
+							<button class="btns" style="
+                    background: #a12b2b;
+                    padding: 3px 6px;
+                    font-weight: 400;
+                    width: 100px;
+                  ">
+								cancled
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="noticeMenuitem" style="
+              padding: 0px 5px;
+              display: flex;
+              line-height: 1.25;
+              border-bottom: 1px solid #ccc;
+            ">
+					<div style="display: inline-block; width: 5%; padding: 2px">
+						<b>1.</b>
+					</div>
+					<br />
+					<div style="display: inline-block; width: 90%; padding: 2px">
+						<div><b>Scheduled Appointment For Evelyn Sane (07013177)</b></div>
+						<div>
+							Follow up after Doctors consultation with Dr. Ogheneare (122445)
+						</div>
+						<div>
+							<small>Apointment Date &amp; Time: 2023-01-01 9:56AM</small>
+						</div>
+						<div>
+							<button class="btns" style="
+                    background: #91b48c;
+                    padding: 3px 6px;
+                    font-weight: 400;
+                    width: 100px;
+                  ">
+								comfirmed
+							</button>
+							<button class="btns" style="
+                    background: #a12b2b;
+                    padding: 3px 6px;
+                    font-weight: 400;
+                    width: 100px;
+                  ">
+								cancled
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="noticeMenuitem" style="
+              padding: 0px 5px;
+              display: flex;
+              line-height: 1.25;
+              border-bottom: 1px solid #ccc;
+            ">
+					<div style="display: inline-block; width: 5%; padding: 2px">
+						<b>1.</b>
+					</div>
+					<br />
+					<div style="display: inline-block; width: 90%; padding: 2px">
+						<div><b>Scheduled Appointment For Evelyn Sane (07013177)</b></div>
+						<div>
+							Follow up after Doctors consultation with Dr. Ogheneare (122445)
+						</div>
+						<div>
+							<small>Apointment Date &amp; Time: 2023-01-01 9:56AM</small>
+						</div>
+						<div>
+							<button class="btns" style="
+                    background: #91b48c;
+                    padding: 3px 6px;
+                    font-weight: 400;
+                    width: 100px;
+                  ">
+								comfirmed
+							</button>
+							<button class="btns" style="
+                    background: #a12b2b;
+                    padding: 3px 6px;
+                    font-weight: 400;
+                    width: 100px;
+                  ">
+								cancled
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a onclick="dropDown('#dropMenu')" href="javascript:void(0);" class="user-name">
+				<i class="fa fa-fw fa-user-circle nav-icon"></i>
+				<b>System Admin</b>
+				<i class="fa fa-fw fa-arrow-down"></i>
+			</a>
+			<!--topnav links-->
+			<div id="dropMenu" onclick="stopProp()" style="visibility: hidden" class="menu-drop">
+				<div class="menu-drop-item">
+					<span class="drop-icon"><i class="fa fa-fw fa-user"></i></span>
+					<a href="staff/get_staff_details"><b>Profiles</b></a><br />
+					<small class="info">Update &amp; Manage</small>
+				</div>
+				<div class="menu-drop-item">
+					<span class="drop-icon"><i class="fa fa-fw fa-lock"></i></span>
+					<a onclick="dropDown('#update-user-password')" href="javascript:void(0);"><b>Password</b></a><br />
+					<small class="info">Update &amp; Manage</small>
+				</div>
+				<div class="menu-drop-item">
+					<span class="drop-icon"><i class="fa fa-fw fa-cogs"></i></span>
+					<a href="#"><b>Help &amp; Support</b></a><br />
+					<small class="info">Contact &amp; FAC</small>
+				</div>
+				<div class="menu-drop-item">
+					<span class="drop-icon"><i class="fa fa-fw fa-microphone"></i></span>
+					<a href="#"><b>Complain</b></a><br />
+					<small class="info">Report an Issue</small>
+				</div>
+				<div class="menu-drop-item">
+					<button class="logout-btn">
+						<i class="fa fa-fw fa-sign-out-alt"></i>
+						<b> <a href="staff/logout_staff">Logout</a> </b>
+					</button>
+				</div>
+			</div>
+			<!-- update user password form -->
+			<div id="update-user-password" onclick="stopProp()" style="visibility: hidden" class="menu-drop">
+				<!-- Modal content -->
+				<div class="">
+					<div class="form-header flex align-items-center">
+						Change Password
+					</div>
+					<form method="post" action="staff/update_user_password" class="change-pass">
+						<input type="hidden" name="user_id" value="58" />
+						<div>
+							<label for="new-password">Enter current password</label>
+							<input type="password" name="current-password" />
+						</div>
+						<div>
+							<label for="new-password">Enter new password</label>
+							<input type="password" name="new-password" />
+						</div>
+						<div>
+							<label for="new-password">Enter new password again</label>
+							<input type="password" name="confirm-password" />
+						</div>
+						<button type="submit" class="modal-btn btns flex justify-content-center align-items-center">
+							Update
+						</button>
+					</form>
+				</div>
+			</div>
+			<!-- update user password form ends here -->
+		</div>
+	</div>
+	<!--topnav ends-->
+
+	<!---sidebar begins-->
+	<div id="myNav" class="overlay">
+		<div id="webSyd" onclick="stopProp()" class="sidebar overlay-content">
+			<div class="vertical-menu">
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-building sydIcon"></i>
+					<span class="navName">Front Office</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="https://cliniqueplushealthcare.com.ng/appointments">Appointments</a>
+					<a href="front_office/visitors">Visitors</a>
+					<a href="front_office/comp_inq">Complains</a>
+					<a href="front_office/call_log">Call Logs</a>
+					<!-- <a href="">Postals</a> -->
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-file-invoice-dollar sydIcon"></i>
+					<span class="navName">Billings</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="bills/bill_home">Bills</a>
+					<a href="bill_payments/all_bill_payment">Payments</a>
+					<a href="deposits/">Deposits</a>
+					<a href="debts/list_credit">Debtors</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-user-md sydIcon"></i>
+					<span class="navName">Clinics</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="opd_clinic/opd_home">OPD</a>
+					<a href="ipd_clinic/">IPD</a>
+					<a href="ot">Op. Theatre</a>
+					<a href="anc/">ANC</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-microscope sydIcon"></i>
+					<span class="navName">Laboratory</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="pathology_tests/pathology_ordered_test">Tests Requests</a>
+					<a href="pathology_tests/lab_walkin">Lab Walk-in</a>
+				</div>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="opd_clinic/opd_home">OPD</a>
+					<a href="ipd_clinic/">IPD</a>
+					<a href="ot">Op. Theatre</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-x-ray sydIcon"></i>
+					<span class="navName">Imaging</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="imaging_tests/imaging_ordered_test">Tests Requests</a>
+					<a href="pathology_tests/lab_walkin">Imaging Walk-in</a>
+				</div>
+				<!-- <a class="dropdown-btn" href="#">
+          <i class="fa fa-fw fa-motorcycle sydIcon"></i> <span class="navName ">Dispatch</span>
+          <span class="arrow">
+            <i class="fa fa-fw fa-arrow-down arow"></i>
+            <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+          </span>
+        </a> -->
+				<!--sidebar dropdown menu-->
+				<!-- <div class="dropdown-container">
+          <a href="#">Option 1</a>
+          <a href="#">Option 2</a>
+          <a href="#">Option 3</a>
+        </div> -->
+				<!--sidebar link-->
+				<!-- <a class="dropdown-btn" href="#">
+          <i class="fa fa-fw fa-microscope sydIcon"></i> <span class="navName ">Analyzers</span>
+          <span class="arrow">
+            <i class="fa fa-fw fa-arrow-down arow"></i>
+            <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+          </span>
+        </a> -->
+				<!--sidebar dropdown menu-->
+				<!-- <div class="dropdown-container">
+          <a href="#">Option 1</a>
+          <a href="#">Option 2</a>
+          <a href="#">Option 3</a>
+        </div> -->
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-prescription sydIcon"></i>
+					<span class="navName">Pharmacy</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="pharmacy_walkin/batch_dispensary_requests">Items Requests</a>
+					<a href="pharmacy_walkin">Walk-in Client</a>
+					<a href="pharmacy">Prescriptions</a>
+					<a href="medicine/">Generic Items</a>
+					<a href="medicine_brands/home">Brand of Items</a>
+					<a href="medicine_bin_card/">Inventory</a>
+					<a href="pharmacy/bill_home">Bills</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-users sydIcon"></i>
+					<span class="navName">Admin</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="hr">HR</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-money-bill sydIcon"></i>
+					<span class="navName navName_active">Finance</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="incomes/finance_charges" style="">Incomes</a>
+					<a href="expenses/list_expenses" style="">Expenses</a>
+					<a href="payment_requests" style="">Requests</a>
+					<a href="payment_requets" style="">Snapshot</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-file-medical sydIcon"></i>
+					<span class="navName">Records</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="patients/patient_lookup">Patients</a>
+					<a href="icd/list_icd">Diseases</a>
+					<a href="births">Births</a>
+					<a href="deaths">Deaths</a>
+					<a href="records/record_bill_home">Billings</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#contact" style="">
+					<i class="fa fa-fw fa-archive sydIcon"></i>
+					<span class="navName"> Inventory</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="inventory_suppliers">Suppliers</a>
+					<a href="inventory_requisition">Requisitions</a>
+					<a href="store_items">In-store Items</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-ambulance sydIcon"></i>
+					<span class="navName">Ambulance</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="#">Drivers</a>
+					<a href="#">Vehicle</a>
+					<a href="#">Ambulance Calls</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-funnel-dollar sydIcon"></i>
+					<span class="navName">Marketing</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="referrer">Referrers</a>
+				</div>
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-store sydIcon"></i>
+					<span class="navName">Shop</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="#">Option 1</a>
+					<a href="#">Option 2</a>
+					<a href="#">Option 3</a>
+				</div>
+				<!--sidebar link-->
+				<!--sidebar link-->
+				<a class="dropdown-btn" href="#" style="">
+					<i class="fa fa-fw fa-gears sydIcon"></i>
+					<span class="navName">Setup</span>
+					<span class="arrow">
+						<i class="fa fa-fw fa-arrow-down arow"></i>
+						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
+					</span>
+				</a>
+				<!--sidebar dropdown menu-->
+				<div class="dropdown-container">
+					<a href="roles/view_roles">Systems</a>
+					<a href="departments/list_departments">HR</a>
+					<a href="expense_categories/view_expense_categories">Account &amp; Finance</a>
+					<a href="pathology_units/view_pathology_units">Laboratory</a>
+					<a href="imaging_tests/home">Imaging</a>
+					<a href="medicine_category/list_medicine_categories">Pharmacy</a>
+					<a href="buildings/">Clinics</a>
+					<a href="ot_categories/list_ot_cat">Op. Theatre</a>
+					<a href="inventory_categories/list_categories">Inventory</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end side bar -->
+	<!-- Modal Structure -->
+	<!-- Modal Structure -->
+	<div id="membershipModal" class="membership-modal">
+		<div class="membership-modal-content">
+			<div style="width: 100%; background-color: #9c3030; color: white; text-align: center;">
+				<h2>Enroll To Gym</h2>
+			</div>
+			<form>
+				<!-- Personal Details -->
+				<div class="membership-form-row">
+					<div class="membership-form-field">
+						<label for="fullName">Full Name</label>
+						<input type="text" id="fullName" placeholder="Enter client full name" />
+					</div>
+					<div class="membership-form-field">
+						<label for="gender">Gender</label>
+						<input type="text" id="gender" placeholder="Enter Gender" />
+					</div>
+				</div>
+				<div class="membership-form-row">
+					<div class="membership-form-field">
+						<label for="dob">Date Of Birth</label>
+						<input type="date" id="dob" placeholder="Date of birth" />
+					</div>
+					<div class="membership-form-field">
+						<label for="phone">Phone Number</label>
+						<input type="text" id="phone" placeholder="Enter phone number(s)" />
+					</div>
+				</div>
+				<div class="membership-form-row">
+					<div class="membership-form-field">
+						<label for="address">Address</label>
+						<input type="text" id="address" placeholder="Enter full address" />
+					</div>
+					<div class="membership-form-field">
+						<label for="howFound">How You Found Us</label>
+						<input type="text" id="howFound" placeholder="Enter how you found us" />
+					</div>
+				</div>
+
+				<!-- Emergency Contact Details -->
+				<h3>Emergency Contact Details</h3>
+				<div class="membership-form-row">
+					<div class="membership-form-field">
+						<label for="emergencyName">Contact Name</label>
+						<input type="text" id="emergencyName" placeholder="Enter contact name" />
+					</div>
+					<div class="membership-form-field">
+						<label for="emergencyPhone">Phone Number</label>
+						<input type="text" id="emergencyPhone" placeholder="Search by name or phone" />
+					</div>
+				</div>
+				<div class="membership-form-row">
+					<div class="membership-form-field">
+						<label for="relationship">Relationship</label>
+						<input type="text" id="relationship" placeholder="Enter relationship" />
+					</div>
+					<div class="membership-form-field">
+						<label for="emergencyPhone2">Phone Number</label>
+						<input type="text" id="emergencyPhone2" placeholder="Search by name or phone" />
+					</div>
+				</div>
+
+				<!-- Membership Details -->
+				<h3>Membership Details</h3>
+				<div class="membership-form-row">
+					<div class="membership-form-field">
+						<label for="plan">Choose Plan (30 days)</label>
+						<select id="plan">
+							<option>Deluxe - Monthly</option>
+						</select>
+					</div>
+					<div class="membership-form-field">
+						<label for="discount">Discount</label>
+						<select id="discount">
+							<option>Flat</option>
+						</select>
+					</div>
+				</div>
+				<div class="membership-form-row">
+					<div class="membership-form-field">
+						<label for="amountPayable">Amount Payable</label>
+						<input type="text" id="amountPayable" placeholder="5,000" />
+					</div>
+					<div class="membership-form-field">
+						<label for="surcharge">Surcharge</label>
+						<input type="text" id="surcharge" placeholder="%" />
+					</div>
+				</div>
+
+				<!-- Payment Details -->
+				<h3>Payment Details</h3>
+				<div class="membership-form-row">
+					<div class="membership-form-field">
+						<label for="payingAmount">Paying Amount</label>
+						<input type="text" id="payingAmount" placeholder="5000" />
+					</div>
+					<div class="membership-form-field">
+						<label for="bankChoice">Choose Plan</label>
+						<select id="bankChoice">
+							<option>Zenith Bank PLC</option>
+						</select>
+					</div>
+				</div>
+
+				<button type="button" class="membership-save-button" onclick="closeModal()">Save</button>
+			</form>
+		</div>
+	</div>
+
+	<!--section begins-->
+	<div class="section" style="border-radius: 8px;">
+		<div id="webMain" class="main">
+			<span class="mobile_btn" href="#" style="cursor: pointer; margin-left: 1px" onclick="toggleSideBar()">
+				<i class="fa fa-fw fa-bars"></i>
+			</span>
+			<!--bread crumbs-->
+			<span class="arrow">
+				<a style="color: #ccc">Records <i class="fa fa-fw fa-arrow-right"></i></a>
+				<b>Pre Registration</b>
+			</span>
+			<!-- page content begins here -->
+			<br />
+			<section class="modaBox patient-list" style="padding: 10px;">
+				<div>
+					<div class="inner-top-nav">
+						<button class="selector-selected">Gym</button>
+						<button class="selector">Massage</button>
+					</div>
+					<div class="filter-section">
+						<form action="#" method="get">
+							<div class="formField">
+								<label for="start date">Start Date</label>
+								<input type="date" name="start_date" />
+							</div>
+							<div class="formField">
+								<label for="end date">End Date</label>
+								<input type="date" name="end_date" />
+							</div>
+							<div class="formField">
+								<label for="membership plan">Membership Plan</label>
+								<input type="text" name="membership plan" />
+							</div>
+							<div class="formField2">
+								<label for="Filter">Filter</label>
+								<input type="text" placeholder="Search by Name or Phone" />
+							</div><button class="enrollBtn" onclick="openModal()">Enroll To Gym</button>
+							<div>
+
+								<table class="table">
+									<thead>
+										<tr>
+											<th>S/N</th>
+											<th>Client Name</th>
+											<th>Date and time Reistered</th>
+											<th>Current Plan and Validity</th>
+											<th>Date Registered & By</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<td>1</td>
+										<td>
+											Issac Odinaka Franklin
+											<div class="arthemeter">07023400647</div>
+										</td>
+										<td>
+											2024-10-14 9:45pm
+											<div class="arthemeter">hehe</div>
+										</td>
+										<td>
+											<div class="membership">
+												<span>Deluxe</span>
+												<div class="vmemb" onclick="openModal2()">View Membership History</div>
+											</div>
+											<div class="arthemeter">2024-10-14 9:45pm</div>
+										</td>
+
+										<td>
+											2024-10-14 9:45pm
+											<div class="arthemeter">Issac Odinaka</div>
+										</td>
+										<td>
+											<div class="membership">
+												<!-- Button to trigger the modal -->
+												<button class="status">more</button>
+
+												<!-- Modal for Membership History -->
+												<div id="membershipHistory" style="display: none;"
+													class="membership-history">
+													<div class="membership-history-content">
+														<!-- Close button for modal -->
+														<div
+															style="width: 100%; background-color: #9c3030; color: white; text-align: center;">
+															<h2 style="color: white; ">Membership History</h2>
+														</div>
+														<div style="overflow-y: scroll; height: 600px;">
+															<table class="membership-table">
+																<thead>
+																	<tr>
+																		<th>S/N</th>
+																		<th>Date/Time</th>
+																		<th>Validity</th>
+																		<th>Trans. Code</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>1</td>
+																		<td>
+																			2024-10-14 9:45pm
+																			<div class="arthemeter">Issac Odinaka</div>
+																		</td>
+																		<td>
+																			6 months
+																			<div class="arthemeter">2024-10-14</div>
+																		</td>
+																		<td>
+																			T12345
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+												<button class="status">Physio
+													Note</button>
+											</div>
+										</td>
+									</tbody>
+								</table>
+							</div>
+						</form>
+						<div class="bottomItms">
+							<section class="bottomItmsec">
+								<div class="arthemeter">Deluxe</div> 10
+							</section>
+							<section class="bottomItmsec">
+								<div class="arthemeter">Regular</div> 15
+							</section>
+							<section class="bottomItmsec">
+								<div class="arthemeter">Female</div> 20
+							</section>
+						</div>
+						<div class="pagination">
+							<a href="#" class="prev">&lt;</a>
+							<span class="page-number">1 of 50</span>
+							<a href="#" class="next">&gt;</a>
+						</div>
+						
+						
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<!--footer begins-->
+		<!--footer begins-->
+		<div id="webBtm" class="btmbar" style="width: 100%">
+			<small style="width: 85%">
+				<!--info text-->
+				<div class="btm-info">
+					CliniquePlus EMR Software v2.0.2 by Netwalkers NG (c) 2023. All
+					rights reserveds
+				</div>
+				<!--footer links-->
+				<div class="btm-link">
+					<a href="#home" class="">About Us</a> |
+					<a href="#news">Contact Us</a> |
+					<a href="#contact">Terms of Service</a> |
+					<a href="#contact">Privacy Policy</a>
+					<!-- <a href="#contact">Proudly <img src="" width="50"alt="logo"></a> -->
+				</div>
+			</small>
+		</div>
+		<!--footer ends-->
+	</div>
+	<!--section ends-->
+	<!-- approve delete equipment modal -->
+	<div id="deleteEquipmentModal" class="modal overlay-trans">
+		<div class="modal-content" style="--width: 375px; --height: auto" onclick="stopProp()">
+			<div class="modal-head">
+				<div class="title p-10 f-w-bold">Delete Equipment</div>
+				<button onclick="toggleModal('#deleteEquipmentModal')" type="button" class="close x">
+					<i class="fa fa-fw fa-times"></i>
+				</button>
+			</div>
+			<div class="modal-body p-lr-20 p-tb-10" style="max-width: unset; width: 100%">
+				<p class="f-w-5">
+					You are about to delete this equipment & all its details, this can
+					not be recovered anymore
+				</p>
+				<div class="flex justify-content-center">
+					<a href="#" class="btns">Proceed</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- approve delete equipment modal end -->
+	<script type="text/javascript" src="https://cliniqueplushealthcare.com.ng/public/js/script.js"></script>
+	<script type="text/javascript"
+		src="https://cliniqueplushealthcare.com.ng/public/scripts/notification_check.js"></script>
+	<script type="text/javascript" src="https://cliniqueplushealthcare.com.ng/public/scripts/hide_show.js"></script>
+	<script type="text/javascript" src="https://cliniqueplushealthcare.com.ng/public/scripts/top_info.js"></script>
+	<script type="text/javascript" src="https://cliniqueplushealthcare.com.ng/public/scripts/toggle.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

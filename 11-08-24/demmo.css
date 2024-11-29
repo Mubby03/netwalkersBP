@@ -1,0 +1,368 @@
+.formField {
+  width: 172px;
+  height: 33px;
+  display: inline-block;
+  margin: 2px;
+  text-align: left;
+}
+
+.formField2 {
+  width: 319px;
+  height: 33px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.table {
+  width: 98%;
+  height: fit-content;
+  padding: 6px 10px;
+  margin: 10px;
+  margin-top: 60px;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.arthemeter {
+  background-color: #5b5b5b;
+  color: #f1f1f1;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 3px;
+}
+
+.vmemb {
+  background-color: #9c3030;
+  color: #f1f1f1;
+  width: fit-content;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 3px 6px;
+  font-size: 5px;
+  margin-left: 15px;
+}
+
+.membership {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inner-top-nav {
+  padding: 10px;
+}
+.selector {
+  background-color: #9c3030;
+  color: #ffffff;
+  margin-top: 7px;
+  width: fit-content;
+  border: 2px solid #9c3030;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.selector-selected {
+  background-color: #ffffff;
+  color: #9c3030;
+  margin-top: 7px;
+  width: fit-content;
+  border: 2px solid #9c3030;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+thead {
+  background-color: #dddd;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Roboto";
+}
+
+tbody {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.table th,
+.table td {
+  border: 1px solid #dddd;
+  padding: 10px;
+}
+
+.status {
+  background-color: #9c3030;
+  color: #f8f8f8dd;
+  margin-top: 7px;
+  border-radius: 5px;
+  margin-left: 4px;
+  width: fit-content;
+  border: 2px solid #9c3030;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.enrollBtn {
+  background-color: #9c3030;
+  color: #f8f8f8dd;
+  border-radius: 5px;
+  width: fit-content;
+  border: 2px solid #9c3030;
+  margin-top: 20px;
+  padding: 5px 10px;
+  right: 35px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.status.selected {
+  background-color: white;
+  color: #9c3030;
+}
+
+/* Modal background overlay */
+.membership-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content box */
+.membership-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading styles */
+.membership-modal-content h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+/* Close button (X) styling */
+.membership-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.membership-modal-close:hover {
+  color: #000;
+}
+
+/* Form row styling */
+.membership-form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* Form field styling */
+.membership-form-field {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Form field last child to remove margin-right */
+.membership-form-field:last-child {
+  margin-right: 0;
+}
+
+/* Input field styling */
+.membership-form-field input,
+.membership-form-field select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Heading for sections */
+.membership-modal-content h3 {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+/* Save button styling */
+.membership-save-button {
+  background-color: #9c3030;
+  color: white;
+  width: 75px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+}
+
+.membership-save-button:hover {
+  background-color: #464646;
+}
+
+/* Modal background overlay */
+.membership-history {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+.membership-history-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  height: 70%;
+  max-width: 600px;
+  margin: 50px auto;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal heading */
+.membership-history-content h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.membership-history-close:hover {
+  color: #e74c3c;
+}
+
+/* Table styling */
+.membership-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.membership-table th,
+.membership-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.membership-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  color: #333;
+}
+
+.membership-table td {
+  background-color: #fff;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Hover effect on table rows */
+.membership-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.bottomItms {
+  bottom: 0;
+  margin-bottom: 20px;
+  position: absolute;
+  gap: 10px;
+  row-gap: 10px;
+}
+.bottomItmsec {
+  align-items: center;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #8B0000;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.pagination .page-number {
+  margin: 0 5px;
+}
+
+/* Table responsiveness */
+@media (max-width: 768px) {
+  .membership-history-content {
+    width: 80vw;
+    height: 70vh;
+    padding: 15px;
+  }
+
+  .membership-table th,
+  .membership-table td {
+    padding: 8px;
+  }
+}
