@@ -282,12 +282,13 @@ tbody {
   height: 40px;
   text-align: center;
   padding: 3px 6px;
-  background-color: #8b0000;
+  background-color: #a12b2b;
   display: flex;
   justify-content: center;
   font-size: 25px;
   color: white;
   font-family: inherit;
+  font-weight: 800;
   align-items: center;
 }
 
@@ -329,7 +330,6 @@ tbody {
   max-height: 80%;
   height: fit-content;
   overflow-y: scroll;
-  font-style: bold;
   padding: 10px;
 }
 
@@ -341,9 +341,6 @@ tbody {
   font-family: inherit;
 }
 
-.membership-table th {
-  font-weight: bold;
-}
 .membership-table th,
 .membership-table td {
   padding: 12px;
