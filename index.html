@@ -53,7 +53,8 @@
 		<!--topnav for web-->
 		<span class="web_nav">
 			<div class="sub-side-bar">
-				<img class="logo" src="uploads/facility_logo/nubi_small_(1).png" alt="logo" />
+				<img class="logo" src="https://cliniqueplushealthcare.com.ng/uploads/facility_logo/nubi_small_(1).png"
+					alt="logo" />
 				<a class="web_btn" href="javascript:void(0);" style="cursor: pointer" onclick="toggleNav()">
 					<i class="fa fa-fw fa-bars nav-icon" style="filter: brightness(100);"></i>
 					<b class="lab-name" style="filter: brightness(100);">Your Clinic Name Here</b>
@@ -322,7 +323,7 @@
 					</span>
 				</a>
 				<!--sidebar dropdown menu-->
-				
+
 				<div class="dropdown-container">
 					<a href="opd_clinic/opd_home">OPD</a>
 					<a href="ipd_clinic/">IPD</a>
@@ -544,108 +545,110 @@
 	<!-- Modal Structure -->
 	<div id="membershipModal" class="membership-modal">
 		<div class="membership-modal-content">
-			<div style="width: 100%; background-color: #9c3030; color: white; text-align: center;">
-				<h2>Enroll To Gym</h2>
-			</div>
+			<div class="modal-header" style="width: 100%; background-color: #9c3030; color: white; text-align: center;">
+				Enroll To Gym </div>
 			<form>
-				<!-- Personal Details -->
-				<div class="membership-form-row">
-					<div class="membership-form-field">
-						<label for="fullName">Full Name</label>
-						<input type="text" id="fullName" placeholder="Enter client full name" />
+				<div class="modal-holder">
+					<!-- Personal Details -->
+					<div class="membership-form-row">
+						<div class="membership-form-field">
+							<label for="fullName">Full Name</label>
+							<input type="text" id="fullName" placeholder="Enter client full name" />
+						</div>
+						<div class="membership-form-field">
+							<label for="gender">Gender</label>
+							<input type="text" id="gender" placeholder="Enter Gender" />
+						</div>
 					</div>
-					<div class="membership-form-field">
-						<label for="gender">Gender</label>
-						<input type="text" id="gender" placeholder="Enter Gender" />
+					<div class="membership-form-row">
+						<div class="membership-form-field">
+							<label for="dob">Date Of Birth</label>
+							<input type="date" id="dob" placeholder="Date of birth" />
+						</div>
+						<div class="membership-form-field">
+							<label for="phone">Phone Number</label>
+							<input type="text" id="phone" placeholder="Enter phone number(s)" />
+						</div>
 					</div>
-				</div>
-				<div class="membership-form-row">
-					<div class="membership-form-field">
-						<label for="dob">Date Of Birth</label>
-						<input type="date" id="dob" placeholder="Date of birth" />
+					<div class="membership-form-row">
+						<div class="membership-form-field">
+							<label for="address">Address</label>
+							<input type="text" id="address" placeholder="Enter full address" />
+						</div>
+						<div class="membership-form-field">
+							<label for="howFound">How You Found Us</label>
+							<input type="text" id="howFound" placeholder="Enter how you found us" />
+						</div>
 					</div>
-					<div class="membership-form-field">
-						<label for="phone">Phone Number</label>
-						<input type="text" id="phone" placeholder="Enter phone number(s)" />
-					</div>
-				</div>
-				<div class="membership-form-row">
-					<div class="membership-form-field">
-						<label for="address">Address</label>
-						<input type="text" id="address" placeholder="Enter full address" />
-					</div>
-					<div class="membership-form-field">
-						<label for="howFound">How You Found Us</label>
-						<input type="text" id="howFound" placeholder="Enter how you found us" />
-					</div>
-				</div>
 
-				<!-- Emergency Contact Details -->
-				<h3>Emergency Contact Details</h3>
-				<div class="membership-form-row">
-					<div class="membership-form-field">
-						<label for="emergencyName">Contact Name</label>
-						<input type="text" id="emergencyName" placeholder="Enter contact name" />
-					</div>
-					<div class="membership-form-field">
-						<label for="emergencyPhone">Phone Number</label>
-						<input type="text" id="emergencyPhone" placeholder="Search by name or phone" />
-					</div>
-				</div>
-				<div class="membership-form-row">
-					<div class="membership-form-field">
-						<label for="relationship">Relationship</label>
-						<input type="text" id="relationship" placeholder="Enter relationship" />
-					</div>
-					<div class="membership-form-field">
-						<label for="emergencyPhone2">Phone Number</label>
-						<input type="text" id="emergencyPhone2" placeholder="Search by name or phone" />
-					</div>
-				</div>
 
-				<!-- Membership Details -->
-				<h3>Membership Details</h3>
-				<div class="membership-form-row">
-					<div class="membership-form-field">
-						<label for="plan">Choose Plan (30 days)</label>
-						<select id="plan">
-							<option>Deluxe - Monthly</option>
-						</select>
+					<!-- Emergency Contact Details -->
+					<h3>Emergency Contact Details</h3>
+					<div class="membership-form-row">
+						<div class="membership-form-field">
+							<label for="emergencyName">Contact Name</label>
+							<input type="text" id="emergencyName" placeholder="Enter contact name" />
+						</div>
+						<div class="membership-form-field">
+							<label for="emergencyPhone">Phone Number</label>
+							<input type="text" id="emergencyPhone" placeholder="Search by name or phone" />
+						</div>
 					</div>
-					<div class="membership-form-field">
-						<label for="discount">Discount</label>
-						<select id="discount">
-							<option>Flat</option>
-						</select>
+					<div class="membership-form-row">
+						<div class="membership-form-field">
+							<label for="relationship">Relationship</label>
+							<input type="text" id="relationship" placeholder="Enter relationship" />
+						</div>
+						<div class="membership-form-field">
+							<label for="emergencyPhone2">Phone Number</label>
+							<input type="text" id="emergencyPhone2" placeholder="Search by name or phone" />
+						</div>
 					</div>
-				</div>
-				<div class="membership-form-row">
-					<div class="membership-form-field">
-						<label for="amountPayable">Amount Payable</label>
-						<input type="text" id="amountPayable" placeholder="5,000" />
-					</div>
-					<div class="membership-form-field">
-						<label for="surcharge">Surcharge</label>
-						<input type="text" id="surcharge" placeholder="%" />
-					</div>
-				</div>
 
-				<!-- Payment Details -->
-				<h3>Payment Details</h3>
-				<div class="membership-form-row">
-					<div class="membership-form-field">
-						<label for="payingAmount">Paying Amount</label>
-						<input type="text" id="payingAmount" placeholder="5000" />
+					<!-- Membership Details -->
+					<h3>Membership Details</h3>
+					<div class="membership-form-row">
+						<div class="membership-form-field">
+							<label for="plan">Choose Plan (30 days)</label>
+							<select id="plan">
+								<option>Deluxe - Monthly</option>
+							</select>
+						</div>
+						<div class="membership-form-field">
+							<label for="discount">Discount</label>
+							<select id="discount">
+								<option>Flat</option>
+							</select>
+						</div>
 					</div>
-					<div class="membership-form-field">
-						<label for="bankChoice">Choose Plan</label>
-						<select id="bankChoice">
-							<option>Zenith Bank PLC</option>
-						</select>
+					<div class="membership-form-row">
+						<div class="membership-form-field">
+							<label for="amountPayable">Amount Payable</label>
+							<input type="text" id="amountPayable" placeholder="5,000" />
+						</div>
+						<div class="membership-form-field">
+							<label for="surcharge">Surcharge</label>
+							<input type="text" id="surcharge" placeholder="%" />
+						</div>
 					</div>
-				</div>
 
-				<button type="button" class="membership-save-button" onclick="closeModal()">Save</button>
+					<!-- Payment Details -->
+					<h3>Payment Details</h3>
+					<div class="membership-form-row">
+						<div class="membership-form-field">
+							<label for="payingAmount">Paying Amount</label>
+							<input type="text" id="payingAmount" placeholder="5000" />
+						</div>
+						<div class="membership-form-field">
+							<label for="bankChoice">Choose Plan</label>
+							<select id="bankChoice">
+								<option>Zenith Bank PLC</option>
+							</select>
+						</div>
+					</div>
+
+					<button type="button" class="membership-save-button" onclick="closeModal()">Save</button>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -680,9 +683,15 @@
 								<input type="date" name="end_date" />
 							</div>
 							<div class="formField">
-								<label for="membership plan">Membership Plan</label>
-								<input type="text" name="membership plan" />
+								<label for="membership-plan">Membership Plan</label>
+								<select id="membership-plan" name="membership-plan" class="styled-select">
+									<option value="" disabled selected>Select a plan</option>
+									<option value="basic">Basic</option>
+									<option value="standard">Standard</option>
+									<option value="premium">Premium</option>
+								</select>
 							</div>
+
 							<div class="formField2">
 								<label for="Filter">Filter</label>
 								<input type="text" placeholder="Search by Name or Phone" />
@@ -690,7 +699,7 @@
 							<div>
 
 								<table class="table">
-									<thead>
+									<thead style="font-family: inherit; ">
 										<tr>
 											<th>S/N</th>
 											<th>Client Name</th>
@@ -731,14 +740,12 @@
 												<div id="membershipHistory" style="display: none;"
 													class="membership-history">
 													<div class="membership-history-content">
-														<!-- Close button for modal -->
-														<div
-															style="width: 100%; background-color: #9c3030; color: white; text-align: center;">
-															<h2 style="color: white; ">Membership History</h2>
+														<div class="modal-header">
+															Membership Plan
 														</div>
-														<div style="overflow-y: scroll; height: 600px;">
+														<div class="table-holder" style="justify-items: center; ">
 															<table class="membership-table">
-																<thead>
+																<thead style="font-family: inherit; ">
 																	<tr>
 																		<th>S/N</th>
 																		<th>Date/Time</th>
@@ -790,8 +797,8 @@
 							<span class="page-number">1 of 50</span>
 							<a href="#" class="next">&gt;</a>
 						</div>
-						
-						
+
+
 					</div>
 				</div>
 			</section>
@@ -807,7 +814,7 @@
 					rights reserveds
 				</div>
 				<!--footer links-->
-				<div class="btm-link"  style="filter: brightness(100);">
+				<div class="btm-link" style="filter: brightness(100);">
 					<a href="#home" class="">About Us</a> |
 					<a href="#news">Contact Us</a> |
 					<a href="#contact">Terms of Service</a> |
