@@ -49,29 +49,35 @@
 
 <body onresize="" class="opd_visit_details">
 	<!--topnav begins-->
-	<div id="headDiv" class="topnav" style="background-color: #A12B2B;">
+	<div id="headDiv" class="topnav" style="background-color: #A12B2B; height: fit-content;">
 		<!--topnav for web-->
 		<span class="web_nav">
 			<div class="sub-side-bar">
 				<img class="logo" src="https://cliniqueplushealthcare.com.ng/uploads/facility_logo/nubi_small_(1).png"
 					alt="logo" />
 				<a class="web_btn" href="javascript:void(0);" style="cursor: pointer" onclick="toggleNav()">
-					<i class="fa fa-fw fa-bars nav-icon" style="filter: brightness(100);"></i>
-					<b class="lab-name" style="filter: brightness(100);">Your Clinic Name Here</b>
+					<i class="fa fa-fw fa-bars nav-icon" style="color: white;"></i>
+					<section style="margin-left: 190px; margin-top: -60px; ">
+						<h class="address"
+							style="display: flex; color: white; font-family: inherit; justify-content: end; font-weight: 800;">
+							Surulere</h>
+						<b class="lab-name" style="color: white; font-size: 26px;">Your Clinic Name Here</b>
+					</section>
 				</a>
 			</div>
 		</span>
 		<!--topnav for mobile-->
 		<span class="sub-side-bar mobile_nav">
 			<img class="logo" src="https://cliniqueplushealthcare.com.ng/public/img/logo.png" alt="logo" />
+
 			<b class="lab-name">Your Laboratory Name</b>
 		</span>
-		<div class="sub-top-nav" style="filter: brightness(100);">
+		<div class="sub-top-nav">
 			<a onclick="dropDown('#noticeMenu')" href="javascript:void(0);" style="margin-right: 7px">
-				<i class="fa fa-fw fa-bell nav-icon"></i><sup class="notify" id="notify" style="display: none">0</sup>
+				<i class="fa fa-fw fa-bell nav-icon" style="color: white;"></i><sup class="notify" id="notify" style="display: none">0</sup>
 			</a>
-			<a onclick="dropDown('#msgMenu')" href="javascript:void(0);" style="margin-right: 7px">
-				<i class="fa fa-fw fa-envelope nav-icon"></i><sup class="notify">1</sup>
+			<a onclick="dropDown('#msgMenu')" href="javascript:void(0);" style="margin-right: 7px; color: white;">
+				<i class="fa fa-fw fa-envelope nav-icon" ></i><sup class="notify">1</sup>
 			</a>
 			<!--notification dropdown-->
 			<div id="noticeMenu" onclick="stopProp()" style="
@@ -211,9 +217,9 @@
 				</div>
 			</div>
 			<a onclick="dropDown('#dropMenu')" href="javascript:void(0);" class="user-name">
-				<i class="fa fa-fw fa-user-circle nav-icon"></i>
-				<b>System Admin</b>
-				<i class="fa fa-fw fa-arrow-down"></i>
+				<i class="fa fa-fw fa-user-circle nav-icon" style="color: white;"></i>
+				<b style="color: white;">System Admin</b>
+				<i class="fa fa-fw fa-arrow-down" style="color: white;"></i>
 			</a>
 			<!--topnav links-->
 			<div id="dropMenu" onclick="stopProp()" style="visibility: hidden" class="menu-drop">
@@ -277,13 +283,13 @@
 	<!--topnav ends-->
 
 	<!---sidebar begins-->
-	<div id="myNav" class="overlay">
-		<div id="webSyd" onclick="stopProp()" class="sidebar overlay-content">
+	<div id="myNav" class="overlay" style="margin-top: 5px;">
+		<div id="webSyd" onclick="stopProp()" class="sidebar">
 			<div class="vertical-menu">
 				<!--sidebar link-->
 				<a class="dropdown-btn" href="#" style="">
 					<i class="fa fa-fw fa-building sydIcon"></i>
-					<span class="navName">Front Office</span>
+					<span class="navName  navName_active">Front Office</span>
 					<span class="arrow">
 						<i class="fa fa-fw fa-arrow-down arow"></i>
 						<i style="display: none" class="fa fa-fw fa-arrow-up"></i>
@@ -299,7 +305,7 @@
 				</div>
 				<!--sidebar link-->
 				<a class="dropdown-btn" href="#" style="">
-					<i class="fa fa-fw fa-file-invoice-dollar sydIcon"></i>
+					<i class="fa fa-fw fa-file-invoice-dollar sydIcon" ></i>
 					<span class="navName">Billings</span>
 					<span class="arrow">
 						<i class="fa fa-fw fa-arrow-down arow"></i>
@@ -665,7 +671,7 @@
 	</div>
 
 	<!--section begins-->
-	<div class="section" style="border-radius: 8px;">
+	<div class="section" style="border-radius: 8px; margin-top: 5px;">
 		<div id="webMain" class="main">
 			<span class="mobile_btn" href="#" style="cursor: pointer; margin-left: 1px" onclick="toggleSideBar()">
 				<i class="fa fa-fw fa-bars"></i>
@@ -709,7 +715,7 @@
 							</div><button class="enrollBtn" onclick="openModal()">Enroll To Gym</button>
 							<div>
 
-								<table class="table">
+								<table class="table" style="overflow-x: scroll;">
 									<thead style="font-family: inherit; ">
 										<tr>
 											<th>S/N</th>

@@ -117,7 +117,7 @@ tbody {
   color: #f8f8f8dd;
   margin-top: 7px;
   border-radius: 5px;
-  margin-left: 4px;
+  margin-right: -5px;
   width: fit-content;
   border: 2px solid #9c3030;
   padding: 5px 10px;
@@ -142,6 +142,10 @@ tbody {
   color: #9c3030;
 }
 
+.navName_active{
+  
+}
+
 /* Modal background overlay */
 .membership-modal {
   display: none;
@@ -157,7 +161,6 @@ tbody {
 /* Modal content box */
 .membership-modal-content {
   background-color: #fff;
-  border-radius: 8px;
   width: 80%;
   max-width: 600px;
   margin: 50px auto;
@@ -206,6 +209,52 @@ tbody {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+}
+
+/*
+.address,
+.lab-name {
+  display: block;
+}
+*/
+
+.dropdown-btn:hover {
+  border-top-right-radius: 15px;
+  margin-right: 5px;
+}
+
+.dropdown-btn.active {
+  color: #fff;
+  /* Ensure text color is white */
+  border-bottom: 2px solid #fff;
+  /* Optional: Add white bottom border if desired */
+}
+
+.dropdown-btn:hover {
+  background-color: #5b5b5b;
+}
+
+.dropdown-btn {
+  margin-right: 5px;
+}
+
+.dropdown-btn.active {
+  background-color: #a12b2b;
+  border-top-right-radius: 15px;
+  color: #fff;
+}
+
+.dropdown-btn.active i {
+  color: #fff;
+}
+
+.dropdown-btn.hover i {
+  color: #fff;
+}
+
+.dropdown-btn.active .sydIcon {
+  color: #fff !important;
+  /* Force the icon color to white */
 }
 
 /* Form field styling */
