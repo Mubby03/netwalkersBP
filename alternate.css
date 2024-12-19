@@ -142,9 +142,9 @@ tbody {
   color: #9c3030;
 }
 
-.navName_active{
-  
-}
+/* .navName.navName_active{
+  filter: brightness(100%);
+} */
 
 /* Modal background overlay */
 .membership-modal {
